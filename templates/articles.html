@@ -1,0 +1,62 @@
+﻿{% extends "base.html" %}
+
+{% block title %}Полезные статьи - Дизайн-студия{% endblock %}
+
+{% block content %}
+<section class="container">
+    <div class="text-center mb-4">
+        <h1>Полезные статьи</h1>
+        <p>Актуальные новости и полезные материалы из мира дизайна</p>
+    </div>
+    
+    <div class="article-grid">
+        <article class="article-item">
+            <img src="{{ url_for('static', filename='img/article1.jpg') }}" alt="Летний креатив">
+            <div class="article-content">
+                <h3>Нет, вам не показалось!</h3>
+                <p>Приближается лето! В новом креативном дайджесте  всё, чтобы наполниться силами и энергией в ожидании самого тёплого сезона. Яркие и насыщенные проекты с юмором и иронией. А ещё вы наконец узнаете, кто создал жопку</p>
+            </div>
+        </article>
+        
+        <article class="article-item">
+            <img src="{{ url_for('static', filename='img/article2.jpg') }}" alt="Валентинка">
+            <div class="article-content">
+                <h3>Цветы в вазе, любовь в воздухе, креатив в рассылке</h3>
+                <p>Соскучились по нашим креативным дайджестам? Бегите сюда, мы приберегли для вас кое-что интересное. В новой подборке  несколько классных кейсов для развития насмотренности и бонус в виде списка самых интересных рекламных кампаний на День Святого Валентина</p>
+            </div>
+        </article>
+        
+        <article class="article-item">
+            <img src="{{ url_for('static', filename='img/article3.jpg') }}" alt="M-commerce">
+            <div class="article-content">
+                <h3>M-commerce is the new black</h3>
+                <p>Анна Луканина, управляющий партнёр Depot и президент АБКР, выступила модератором и спикером на международном бизнес-форуме Confex в сессии Брендинг и упаковка кондитерских изделий</p>
+            </div>
+        </article>
+
+        <article class="article-item">
+            <img src="{{ url_for('static', filename='img/article4.jpg') }}" alt="Нейросети в дизайне">
+            <div class="article-content">
+                <h3>Нейросети в дизайне: где польза, а где хайп?</h3>
+                <p>Разбираемся, как использовать ML-инструменты в реальных задачах брендинга и когда лучше полагаться на опыт команды.</p>
+            </div>
+        </article>
+
+        <article class="article-item">
+            <img src="{{ url_for('static', filename='img/article5.jpg') }}" alt="Айдентика 2024">
+            <div class="article-content">
+                <h3>Тренды айдентики 2024</h3>
+                <p>Минимализм с характером, градиенты нового поколения и типографика как главная «звезда». Смотрим на лучшие кейсы.</p>
+            </div>
+        </article>
+
+        <article class="article-item">
+            <img src="{{ url_for('static', filename='img/article6.jpg') }}" alt="Упаковка FMCG">
+            <div class="article-content">
+                <h3>Как поднять продажи через упаковку</h3>
+                <p>Пять практических приемов, которые повышают читаемость на полке, выделяют УТП и ускоряют выбор покупателя.</p>
+            </div>
+        </article>
+    </div>
+</section>
+{% endblock %}

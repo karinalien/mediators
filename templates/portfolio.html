@@ -1,61 +1,62 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/reset.css">
-</head>
-<body bgcolor="#8f84d0">
-    <header class="header">
-        <div class="logo">
-            <a href="index.html">
-                <img src="../img/M.png">
-            </a>
+﻿{% extends "base.html" %}
+
+{% block title %}Портфолио - Дизайн-студия{% endblock %}
+
+{% block content %}
+<section class="container">
+    <div class="text-center mb-4">
+        <h1>Наши работы</h1>
+        <p>Примеры успешных проектов, которые мы создали для наших клиентов</p>
+    </div>
+    
+    <div class="portfolio-grid">
+        <div class="portfolio-item">
+            <img src="{{ url_for('static', filename='img/portfolio1.jpg') }}" alt="Denum">
+            <div class="portfolio-content">
+                <h3>Denum: Создание финтех бренда</h3>
+                <p>Разработка фирменного стиля и логотипа для финансовой компании</p>
+            </div>
         </div>
-        <nav class="nav">
-            <ul class="list">
-                <li class="item">
-                    <button class="nav_button"><a href="index.html" class="nav_link">Главная</a></button>
-                </li>
-                <li class="item">
-                    <button class="nav_button" style="background-color: #35266f;"><a href="portfolio.html" class="nav_link">Портфолио</a></button>
-                </li>
-                <li class="item">
-                    <button class="nav_button"><a href="price.html" class="nav_link">Цены</a></button>
-                </li>
-                <li class="item">
-                    <button style="text-align: left; padding-left: 20px; " class="nav_button"><a href="article.html" class="nav_link">Полезные статьи</a></button>
-                </li>
-                <li class="item">
-                    <button class="nav_button"><a href="contact.html" class="nav_link">Контакты</a></button>
-                </li>
-            </ul>
-        </nav>
-    </header>
-<main class="main_portfolio">
-	<div class="m">
-		<div class="text">
-			<img src="../img/portfolio1.jpg" class="portfolio_img">Denum: Создание финтех бренда
-		</div>
-		<div class="text">
-			<img src="../img/portfolio2.jpg" class="portfolio_img">Wellement: Комплекс стратегических работ и фирменный стиль для бренда кормов
-		</div>
-		<div class="text">
-			<img src="../img/portfolio3.jpg" class="portfolio_img">Cute cat: Разработка мерча для молочного бренда «Милград»
-		</div>
-	</div>
-	<div class="a">
-		<div class="text">
-			<img src="../img/portfolio4.jpg" class="portfolio_img">Kept: Локализация KPMG
-		</div>
-		<div class="text">
-			<img src="../img/portfolio5.jpg" class="portfolio_img">Neela Springs: Локализация Eden Springs
-		</div>
-		<div class="text">
-			<img src="../img/portfolio6.jpg" class="portfolio_img">Cute cat: Разработка мерча для молочного бренда «Милград»
-		</div>
-	</div>
-</main>
-</body>
+        
+        <div class="portfolio-item">
+            <img src="{{ url_for('static', filename='img/portfolio2.jpg') }}" alt="Wellement">
+            <div class="portfolio-content">
+                <h3>Wellement: Комплекс стратегических работ</h3>
+                <p>Фирменный стиль для бренда кормов для животных</p>
+            </div>
+        </div>
+        
+        <div class="portfolio-item">
+            <img src="{{ url_for('static', filename='img/portfolio3.jpg') }}" alt="Cute cat">
+            <div class="portfolio-content">
+                <h3>Cute cat: Разработка мерча</h3>
+                <p>Мерч для молочного бренда Милград</p>
+            </div>
+        </div>
+        
+        <div class="portfolio-item">
+            <img src="{{ url_for('static', filename='img/portfolio4.jpg') }}" alt="Kept">
+            <div class="portfolio-content">
+                <h3>Kept: Локализация KPMG</h3>
+                <p>Адаптация международного бренда для российского рынка</p>
+            </div>
+        </div>
+        
+        <div class="portfolio-item">
+            <img src="{{ url_for('static', filename='img/portfolio5.jpg') }}" alt="Neela Springs">
+            <div class="portfolio-content">
+                <h3>Neela Springs: Локализация Eden Springs</h3>
+                <p>Локализация бренда воды для российского рынка</p>
+            </div>
+        </div>
+        
+        <div class="portfolio-item">
+            <img src="{{ url_for('static', filename='img/portfolio6.jpg') }}" alt="Cute cat 2">
+            <div class="portfolio-content">
+                <h3>Cute cat: Разработка мерча</h3>
+                <p>Дополнительная линейка мерча для молочного бренда</p>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

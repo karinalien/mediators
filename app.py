@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*-
+﻿# -*- coding: utf-8 -*-
 from flask import Flask, render_template, request, flash, redirect, url_for, send_from_directory
 import os
 import sqlite3

@@ -1,48 +1,143 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/reset.css">
-</head>
-<body bgcolor="#8f84d0">
-    <header class="header">
-        <div class="logo">
-            <a href="index.html">
-                <img src="../img/M.png">
-            </a>
+﻿{% extends "base.html" %}
+
+{% block title %}Главная - Дизайн-студия{% endblock %}
+
+{% block content %}
+<section class="hero">
+    <div class="container">
+        <div class="hero-content">
+            <h1>Создай свой бренд</h1>
+            <p>Профессиональный дизайн и брендинг для вашего бизнеса</p>
+            <a href="{{ url_for('form') }}" class="btn">Приступить</a>
         </div>
-        <nav class="nav">
-            <ul class="list">
-                <li class="item">
-                    <button class="nav_button" style="background-color: #35266f;"><a href="index.html" class="nav_link">Главная</a></button>
-                </li>
-                <li class="item">
-                    <button class="nav_button"><a href="portfolio.html" class="nav_link">Портфолио</a></button>
-                </li>
-                <li class="item">
-                    <button class="nav_button"><a href="price.html" class="nav_link">Цены</a></button>
-                </li>
-                <li class="item">
-                    <button style="text-align: left; padding-left: 20px;" class="nav_button"><a href="article.html" class="nav_link">Полезные статьи</a></button>
-                </li>
-                <li class="item">
-                    <button class="nav_button"><a href="contact.html" class="nav_link">Контакты</a></button>
-                </li>
-            </ul>
-        </nav>
-    </header>
-    <main class="main">
-        <div class="text_main">
-            <pre class="pre_main">
-Создай
-свой бренд
-            </pre>
-            <button class="button_main"><a href="form.html" class="nav_link"><div class="nav_link">Приступить</div></a></button>
+    </div>
+</section>
+
+<section class="container">
+    <div class="card-grid">
+        <div class="card">
+            <h3><i class="fas fa-palette"></i> Фирменный стиль</h3>
+            <p>Создаем уникальный визуальный образ вашего бренда, который запомнится клиентам</p>
         </div>
-        <img src="../img/Rectangle%201.png" class="img_main">
-    </main>
-</body>
-</html>
+        <div class="card">
+            <h3><i class="fas fa-mobile-alt"></i> Дизайн упаковки</h3>
+            <p>Разрабатываем привлекательную упаковку, которая выделит ваш продукт на полке</p>
+        </div>
+        <div class="card">
+            <h3><i class="fas fa-laptop"></i> Диджитал дизайн</h3>
+            <p>Создаем современные цифровые продукты и интерфейсы для вашего бизнеса</p>
+        </div>
+    </div>
+</section>
+
+<section class="container" id="about">
+    <div class="card">
+        <h2>О студии</h2>
+        <p>Мы — команда дизайнеров, которая помогает бизнесам выделяться. Работаем с малым и средним бизнесом, делаем айдентику, упаковку и digital-дизайн. Сочетаем стратегию, насмотренность и аккуратную реализацию.</p>
+    </div>
+</section>
+
+<section class="container" id="features">
+    <div class="card-grid">
+        <div class="card">
+            <h3><i class="fas fa-bolt"></i> Быстрый старт</h3>
+            <p>Стартуем проект в течение 2 рабочих дней после согласования ТЗ</p>
+        </div>
+        <div class="card">
+            <h3><i class="fas fa-shield-alt"></i> Прозрачность</h3>
+            <p>Фиксированные этапы и контрольные точки, понятные сроки и бюджет</p>
+        </div>
+        <div class="card">
+            <h3><i class="fas fa-award"></i> Качество</h3>
+            <p>Реальные кейсы и проверенные процессы, которые дают результат</p>
+        </div>
+    </div>
+</section>
+
+<section class="container" id="portfolio-preview">
+    <div class="text-center mb-4">
+        <h2>Недавние работы</h2>
+        <p>Посмотрите несколько проектов из портфолио</p>
+    </div>
+    <div class="card-grid">
+        <div class="portfolio-item card">
+            <img src="{{ url_for('static', filename='img/portfolio1.jpg') }}" alt="Проект 1">
+            <h4>Проект 1</h4>
+        </div>
+        <div class="portfolio-item card">
+            <img src="{{ url_for('static', filename='img/portfolio2.jpg') }}" alt="Проект 2">
+            <h4>Проект 2</h4>
+        </div>
+        <div class="portfolio-item card">
+            <img src="{{ url_for('static', filename='img/portfolio3.jpg') }}" alt="Проект 3">
+            <h4>Проект 3</h4>
+        </div>
+    </div>
+    <div class="text-center" style="margin-top: 20px;">
+        <a href="{{ url_for('portfolio') }}" class="btn">Смотреть всё портфолио</a>
+    </div>
+</section>
+
+<section class="container" id="testimonials">
+    <div class="text-center mb-4">
+        <h2>Отзывы клиентов</h2>
+    </div>
+    <div class="card-grid">
+        <div class="card">
+            <p>«Ребята сделали нам фирменный стиль и упаковку. Продажи выросли, визуал стал узнаваемым.»</p>
+            <span>— Анна, владелец кафе</span>
+        </div>
+        <div class="card">
+            <p>«Очень аккуратная работа и в срок. Учли все пожелания, предложили классные варианты.»</p>
+            <span>— Михаил, интернет-магазин</span>
+        </div>
+        <div class="card">
+            <p>«Комплексно подошли к задаче: стратегия, логотип, гайдлайн. Рекомендуем!»</p>
+            <span>— Ольга, бренд одежды</span>
+        </div>
+    </div>
+</section>
+
+<section class="container" id="faq">
+    <div class="card">
+        <h2>FAQ</h2>
+        <div class="accordion" role="tablist">
+            <div class="accordion-item">
+                <button class="accordion-header" role="tab" aria-expanded="false" aria-controls="faq-panel-1" id="faq-tab-1">
+                    <span>Сколько длится проект?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="accordion-content" id="faq-panel-1" role="region" aria-labelledby="faq-tab-1">
+                    <p>Обычно от 2 до 6 недель, в зависимости от объёма и скорости согласований. Для срочных задач делаем ускоренный трек.</p>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <button class="accordion-header" role="tab" aria-expanded="false" aria-controls="faq-panel-2" id="faq-tab-2">
+                    <span>Как происходит оплата?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="accordion-content" id="faq-panel-2" role="region" aria-labelledby="faq-tab-2">
+                    <p>Этапами по договору: предоплата, промежуточные этапы, финальный расчет после приемки. Предоставляем закрывающие документы.</p>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <button class="accordion-header" role="tab" aria-expanded="false" aria-controls="faq-panel-3" id="faq-tab-3">
+                    <span>Можно ли начать с небольшого пилота?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="accordion-content" id="faq-panel-3" role="region" aria-labelledby="faq-tab-3">
+                    <p>Да, стартуем с пилотного этапа: короткий спринт с измеримой целью, чтобы проверить гипотезы и подстроить подход под ваш продукт.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="container" id="cta">
+    <div class="card" style="text-align: center;">
+        <h2>Готовы начать?</h2>
+        <p>Расскажите нам о задаче и получите предложение в течение 1 рабочего дня.</p>
+        <a href="{{ url_for('form') }}" class="btn">Заполнить бриф</a>
+    </div>
+</section>
+{% endblock %}
