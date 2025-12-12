@@ -1,0 +1,236 @@
+/* klee-one-regular - cyrillic */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Klee One';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/klee-one-v7-cyrillic-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+  /* manrope-regular - cyrillic */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/manrope-v15-cyrillic-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+  /* orelega-one-regular - cyrillic_latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Orelega One';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/orelega-one-v12-cyrillic_latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+.header{
+    height: 169px;
+    width: 1358px;
+    margin: 0 auto;
+    display: flex;
+    padding-top: 49px;
+    justify-content: space-between;
+}
+.list{
+    display: flex;
+}
+.item{
+    margin-right: 25px;
+}
+.item:last-child{
+    margin-right: 0px;
+}
+.nav_link{
+    font-size: 17px;
+    font-family: klee One;
+    color: white;
+    text-decoration: none;
+}
+.pre{
+    font-size: 17px;
+    font-family: klee One;
+}
+.nav_button{
+    background-color: #6253b8;
+    border: 0px;
+    width: 184px;
+    height: 60px;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+
+
+.main{
+    width: 1268px;
+    height: 573px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+.pre_main{
+    font-size: 100px;
+    font-family: klee One;
+    position: absolute;
+    color: white;
+    margin-top: 175px;
+}
+.button_main{
+    background-color: #6253b8;
+    margin-top: 525px;
+    margin-left: 147px;
+    border: 0px;
+    width: 400px;
+    height: 137px;
+    border-radius: 40px;
+    text-decoration: none;
+}
+
+.main_portfolio {
+    width: 1274px;
+    height: 658px;
+    margin: 0 auto;
+  
+
+}
+.portfolio_img{
+    border-radius: 30px;
+    width: 375px;
+    height: 238px;
+    margin-right: 55px;
+    margin-bottom: 10px;
+}
+.m {
+    display: flex;
+}
+.a {
+    display: flex;
+    align-self: flex-end;
+}
+.text {
+    font-size: 17px;
+    font-family: Manrope;
+    color: white;
+    text-decoration: none;
+    margin: 0 auto;
+    width: 385px;
+    height: 335px;
+}
+.main_price {
+    width: 1448px;
+    height: 781px;
+    margin: 0 auto;
+  
+}
+.table {
+    width: 1440px;
+    height: 690x;
+    border-top: 1px solid rgb(255, 255, 255);
+    border-collapse: collapse;
+    text-align: center;
+    margin-bottom: 20px;
+    border: 1px solid #dddddd;
+    }
+    
+.td {
+    text-align: left;
+    padding: 10px;
+    border: 1px solid rgb(255, 255, 255);
+    font-size: 15px;
+    font-family: Manrope;
+    color: white;
+    }
+.th {
+    text-align: center;
+    padding: 10px;
+    border: 1px solid rgb(255, 255, 255);
+    font-size: 20px;
+    font-family: klee One;
+    color: white;
+    }
+.orelega {
+    font-size: 17px;
+    font-family: Orelega One;
+    color: white;
+    text-decoration: none;
+    margin: 0 auto;
+}
+
+.main_article {
+    width: 1255px;
+    height: 753px;
+    margin: 0 auto;
+    justify-content: space-between;
+    display: flex;
+  
+}
+.for_img_article {
+    width: 406px;
+    height: 202px;
+    display: flex;  flex-direction: column;
+    margin-bottom: 30px;
+    padding-right: 50px;
+
+}
+.article_txt {
+    display: flex;
+    font-size: 17px;
+    font-family: Manrope;
+    color: white;
+    text-decoration: none;
+  
+}
+.text_article {
+    font-size: 27px;
+    font-family: Orelega One;
+    color: white;
+
+
+}
+.b {
+    display: flex;  flex-direction: column;
+}
+.main_contact {
+    width: 1255px;
+    height: 753px;
+    margin: 0 auto;
+    justify-content: space-between;
+    display: flex;
+  
+}
+.contact {
+   flex-direction: column;  
+}
+.phone1 {
+    font-size: 30px;
+    font-family: Manrope;
+    color: #4b35d1;
+    margin-bottom: 15px;
+}
+.phone2 {
+    font-size: 30px;
+    color: white;
+    margin-bottom: 36px;
+    font-family: Manrope;
+
+}
+.contact_button {    background-color: #6253b8;
+    border: 0px;
+    width: 335px;
+    height: 108px;
+    border-top-left-radius: 70px;
+    border-bottom-right-radius: 70px;
+    margin-top: 40px;
+}
+.contact_link{
+    font-size: 30px;
+    font-family: Manrope;
+    color: white;
+    text-decoration: none;
+}
+.form {
+    width: 1280px;
+    height: 761px;
+    margin: 0 auto;
+    display: flex;
+
+}
